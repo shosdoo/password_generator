@@ -20,7 +20,7 @@ largo_de_cadena = input (f"{Fore.LIGHTCYAN_EX}Indica el largo de la contrasena (
 num = int(largo_de_cadena)
 con_todo = input(f"{Fore.LIGHTCYAN_EX}Quieres que contenga numeros, letras y caracteres especiales?(solo si o no, en minuscula):{Fore.RESET} ")
 if con_todo == "no":
-    print(f"{Fore.LIGHTCYAN_EX}Opciones\n{Fore.RESET}")
+    print(f"{Fore.LIGHTCYAN_EX}Selecciona la opcion que no quieres que contenga\n\nOpciones\n{Fore.RESET}")
     print(f"{Fore.LIGHTGREEN_EX}[1] Numeros {Fore.RESET}")
     print(f"{Fore.LIGHTGREEN_EX}[2] Letras{Fore.RESET}")
     print(f"{Fore.LIGHTGREEN_EX}[3] Caracteres especiales\n{Fore.RESET}")
