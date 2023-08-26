@@ -30,36 +30,60 @@ if con_todo == "si":
     while len(contra_aleatorio) < num:
         categoria_aleatorio = random.choice([Letras, numeros, caracteres])
         contra_aleatorio.append(random.choice(categoria_aleatorio))
-    contra_final = ''.join(contra_aleatorio) 
-    print(contra_final)
-    with open("contra.txt", "w") as archivo:
-        archivo.write(contra_final)
-
+    contra_final = ''.join(contra_aleatorio)
+    output = input(f"{Fore.LIGHTCYAN_EX}Quieres guardar el archivo?(solo si o no):{Fore.RESET} ")
+    if output == "si":
+        file_name = input(f"{Fore.LIGHTCYAN_EX}ingresa el nombre:{Fore.RESET} ")
+    if output == "si":
+        with open(f"{file_name}.txt", "w") as archivo:
+            archivo.write(contra_final)
+            print(f"{Fore.LIGHTCYAN_EX}Contrasena Guardada en {file_name}.txt{Fore.RESET}")
+    elif output == "no":
+        print(f"{Fore.LIGHTCYAN_EX}La contrasena es: {contra_final}{Fore.RESET}")
+        
 elif opcion == "1":
     while len(contra_aleatorio) < num:
         categoria_aleatorio = random.choice([Letras, caracteres])
         contra_aleatorio.append(random.choice(categoria_aleatorio))
     contra_final = ''.join(contra_aleatorio)
-    print(contra_final)
-    with open("contra.txt", "w") as archivo:
-        archivo.write(contra_final)
+    output = input(f"{Fore.LIGHTCYAN_EX}Quieres guardar la contrasena en un archivo?(solo si o no):{Fore.RESET} ")
+    if output == "si":
+        file_name = input(f"{Fore.LIGHTCYAN_EX}Ingresa el nombre del archivo:{Fore.RESET} ")
+    if output == "si":
+        with open(f"{file_name}.txt", "w") as archivo:
+            archivo.write(contra_final)
+            print(f"{Fore.LIGHTCYAN_EX}Contrasena guardada en {file_name}.txt{Fore.RESET}")
+    elif output == "no":
+        print(f"{Fore.LIGHTCYAN_EX}La contrasena es: {contra_final}{Fore.RESET}")
 
 elif opcion == "2":
     while len(contra_aleatorio) < num:
         categoria_aleatorio = random.choice([numeros, caracteres])
         contra_aleatorio.append(random.choice(categoria_aleatorio))
     contra_final = ''.join(contra_aleatorio)
-    print(contra_final)
-    with open("contra.txt", "w") as archivo:
-        archivo.write(contra_final)
+    output = input(f"{Fore.LIGHTCYAN_EX}Quieres guardar la contrasena en un archivo?(solo si o no):{Fore.RESET} ")
+    if output == "si":
+        file_name = input(f"{Fore.LIGHTCYAN_EX}Ingresa el nombre del archivo:{Fore.RESET}")
+    if output == "si":
+        with open(f"{file_name}.txt", "w") as archivo:
+            archivo.write(contra_final)
+            print(f"{Fore.LIGHTCYAN_EX}La contrasena se guardo en {file_name}.txt{Fore.RESET}")
+    elif output == "no":
+        print(f"{Fore.LIGHTCYAN_EX}La contrasena es {contra_final} {Fore.RESET}")
         
 elif opcion == "3":
     while len(contra_aleatorio) < num:
         categoria_aleatorio = random.choice([Letras, numeros])
         contra_aleatorio.append(random.choice(categoria_aleatorio))
     contra_final = ''.join(contra_aleatorio)
-    print(contra_final)
-    with open("contra.txt", "w") as archivo:
-        archivo.write(contra_final)
+    output = input(f"{Fore.LIGHTCYAN_EX}Quieres guardar la contrasena en un archivo?(solo si o no):{Fore.RESET} ")
+    if output == "si":
+        file_name = input(f"{Fore.LIGHTCYAN_EX}Ingresa el nombre de el archivo:{Fore.RESET} ")
+    if output == "si":        
+        with open(f"{file_name}.txt", "w") as archivo:
+            archivo.write(contra_final)
+            print(f"{Fore.LIGHTCYAN_EX}La contrasena se guardo en {file_name}.txt{Fore.RESET}")
+    elif output == "no":
+        print(f"{Fore.LIGHTCYAN_EX}La contrasena es {contra_final}{Fore.RESET}")
         
         
